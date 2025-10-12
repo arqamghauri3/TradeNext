@@ -7,10 +7,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
       <AppSidebar />
       <main className="w-screen min-h-screen px-3">
-        <div className="flex">
-          <SidebarTrigger />
-          <TickerTape />
-        </div>
         {children}
       </main>
     </SidebarProvider>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, memo } from "react";
 
-function AdvanceChartWidget() {
+function AdvanceChartWidget({ height }: { height?: string }) {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function AdvanceChartWidget() {
           "allow_symbol_change": true,
           "calendar": false,
           "details": false,
-          "hide_side_toolbar": true,
+          "hide_side_toolbar": false,
           "hide_top_toolbar": false,
           "hide_legend": false,
           "hide_volume": false,
@@ -54,7 +54,7 @@ function AdvanceChartWidget() {
     <div
       className="tradingview-widget-container"
       ref={container}
-      style={{ height: "40vh", width: "100%" }}
+      style={{ height: "500px", width: "100%" }}
     >
       {/* TradingView widget will be injected here by the script */}
     </div>

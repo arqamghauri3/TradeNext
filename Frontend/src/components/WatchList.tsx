@@ -16,7 +16,7 @@ function Watchlist() {
           "dateRange": "12M",
           "locale": "en",
           "largeChartUrl": "",
-          "isTransparent": false,
+          "isTransparent": true,
           "showFloatingTooltip": false,
           "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
           "plotLineColorFalling": "rgba(41, 98, 255, 1)",
@@ -134,7 +134,6 @@ function Watchlist() {
             }
           ],
           "support_host": "https://www.tradingview.com",
-          "backgroundColor": "#131722",
           "width": "100%",
           "height": "350",
           "showSymbolLogo": true,

@@ -10,11 +10,12 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import TickerTape from "@/components/TickerTape";
 
 const poppins = Poppins({
-  variable:"--font-poppins",
-  display: 'swap',
-  weight:"300"
+  variable: "--font-poppins",
+  display: "swap",
+  weight: "300",
 });
 
 const geistSans = Geist({
@@ -40,10 +41,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className="dark">
-        <body
-          className={`${poppins.variable} antialiased`}
-        >
+        <body className={`${poppins.variable} antialiased`}>
           <header className="flex justify-end items-center p-4 gap-4 h-16">
+            <TickerTape />
             <SignedOut>
               <SignInButton />
               <SignUpButton>
