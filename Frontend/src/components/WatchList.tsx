@@ -135,7 +135,7 @@ function Watchlist() {
           ],
           "support_host": "https://www.tradingview.com",
           "width": "100%",
-          "height": "350",
+          "height": "100%",
           "showSymbolLogo": true,
           "showChart": true
         }`;

@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
 import {
   ClerkProvider,
   SignInButton,
-  SignUpButton,
+  SignUpButton, 
   SignedIn,
   SignedOut,
   UserButton,

@@ -13,8 +13,8 @@ function AdvanceChartWidget({ height }: { height?: string }) {
     script.innerHTML = `
         {
           "allow_symbol_change": true,
-          "calendar": false,
-          "details": false,
+          "calendar": true,
+          "details": true,
           "hide_side_toolbar": false,
           "hide_top_toolbar": false,
           "hide_legend": false,
@@ -29,23 +29,27 @@ function AdvanceChartWidget({ height }: { height?: string }) {
           "timezone": "Etc/UTC",
           "backgroundColor": "#0F0F0F",
           "gridColor": "rgba(242, 242, 242, 0.06)",
-          "watchlist": [],
-          "withdateranges": false,
+          "watchlist": [
+            "BINANCE:BTCUSDT",
+            "OANDA:XAUUSD",
+            "OANDA:NAS100USD"
+          ],
+          "withdateranges": true,
           "compareSymbols": [],
           "studies": [],
           "autosize": true
         }`;
-    
+
     if (container.current) {
       // Clear any existing content before adding new script
-      container.current.innerHTML = '';
+      container.current.innerHTML = "";
       container.current.appendChild(script);
     }
 
     // Cleanup function to remove script when component unmounts
     return () => {
       if (container.current) {
-        container.current.innerHTML = '';
+        container.current.innerHTML = "";
       }
     };
   }, []);
@@ -54,7 +58,7 @@ function AdvanceChartWidget({ height }: { height?: string }) {
     <div
       className="tradingview-widget-container"
       ref={container}
-      style={{ height: "500px", width: "100%" }}
+      style={{ height: height, width: "100%" }}
     >
       {/* TradingView widget will be injected here by the script */}
     </div>
